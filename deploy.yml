@@ -1,0 +1,132 @@
+version: "3.4"
+
+networks:
+  api-backend-net:
+  backend-net:
+  db-net:
+
+services:
+#   nginx-ingress-controller:
+#     image: nginx
+#     networks:
+#       - backend-net
+#     ports:
+#       - 80:80
+#       - 443:443
+#     volumes:
+#       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+#       - ./nginx/default:/etc/nginx/sites-available/default
+#       # - ./logs/nginx/:/var/log/nginx
+#     deploy:
+#       restart_policy:
+#         condition: on-failure
+
+# main service
+  api-service:
+    image: gateway:20200507.0808
+    networks:
+      - backend-net
+      - db-net
+    volumes:
+      - ./www/vnp:/var/server/
+      - ./data-volume/caches:/var/server/caches
+      - ./data-volume/csvs:/var/server/csvs
+      - ./data-volume/logs:/var/server/logs
+      - ./data-volume/sessions:/var/server/sessions
+    ports:
+      - 9001:9001
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        order: start-first
+        failure_action: rollback
+        delay: 10s
+      restart_policy:
+        condition: any
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+
+  # client-service:
+  #   image: registry.gitlab.com/cmc-ts/loyalty-system/client-service:20190531.0647
+  #   networks:
+  #     - backend-net
+  #     - db-net
+  #   volumes:
+  #     - ./logs/client:/var/client/.temp/logs
+  #   ports:
+  #     - 3001:3001
+  #   deploy:
+  #     replicas: 1
+  #     restart_policy:
+  #       condition: on-failure
+
+  # admin-service:
+  #   image: registry.gitlab.com/cmc-ts/loyalty-system/admin-service:20190531.0640
+  #   networks:
+  #     - backend-net
+  #     - db-net
+  #   volumes:
+  #     - ./logs/admin:/var/admin/.temp/logs
+  #   ports:
+  #     - 3003:3003
+  #   deploy:
+  #     replicas: 1
+  #     restart_policy:
+  #       condition: on-failure
+
+# DB services
+  postgresql:
+    image: bitnami/postgresql:11.7.0
+    networks:
+      - db-net
+    volumes:
+      - ./postgresql/DB:/bitnami/postgresql
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRESQL_USERNAME: postgres
+      POSTGRESQL_PASSWORD: CMCSI@2018
+    deploy:
+      restart_policy:
+        condition: on-failure
+
+  # mysql:
+  #   image: mysql:5.7
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: PaladiN@3306#Mantis
+  #   command: |
+  #     sh -c "
+  #       if [ -f /etc/localtime ];then
+  #       echo remove-time;
+  #       rm /etc/localtime;
+  #       fi
+  #       ln -s /usr/share/zoneinfo/Asia/Saigon /etc/localtime;
+  #       date
+  #       service mysql restart
+  #       while :; do sleep 2073600; done
+  #       "
+  #   ports:
+  #     - 3306:3306
+  #   networks:
+  #     - db-net
+  #   volumes:
+  #     - ./mysql/DB:/var/lib/mysql
+  #     # - ./logs/mysql:/var/log/mysql
+  #     # - ./mysql/config:/etc/mysql/conf.d
+  #   deploy:
+  #     restart_policy:
+  #       condition: on-failure
+
+  netdata:
+    image: firehol/netdata
+    ports:
+      - 19999:19999
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    deploy:
+      restart_policy:
+        condition: on-failure

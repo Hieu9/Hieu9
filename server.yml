@@ -1,0 +1,130 @@
+apps:
+  - script    : ./index.js
+    name      : 'VNPOST-MASTER-PRO'
+    cwd       : ./
+    watch     : true
+    instances : 'max'
+    max_memory_restart: '4096M'
+    node_args : '--expose-gc --max-old-space-size=4096'
+    exec_mode : 'cluster'
+    env :
+      PORT: 9001
+      ENV : production
+    ignore_watch: [node_modules, logs, csvs, sessions, caches, bccpsessions]
+    log_date_format: 'ddd YYYY-MM-DD HH:mm:ss.SSS Z'
+    error_file: ./logs/error.log
+    out_file: ./logs/console.log
+    pid_file: ./logs/process.pid
+    max_restarts: 6
+    combine_logs: true
+    merge_logs: true
+    source_map_support: true
+  - script : ./job.js
+    name   : 'VNPOST-JOB-PRO'
+    watch  : true
+    ignore_watch: [node_modules, logs, csvs, sessions, caches, bccpsessions]
+    log_date_format: 'ddd YYYY-MM-DD HH:mm:ss.SSS Z'
+    error_file: ./logs/job/error.log
+    out_file: ./logs/job/console.log
+    pid_file: ./logs/job/process.pid
+    merge_logs: true
+  - script : ./worker.js
+    name   : 'VNPOST-WORKER-PRO'
+    watch  : true
+    ignore_watch: [node_modules, logs, csvs, sessions, caches, bccpsessions]
+    log_date_format: 'ddd YYYY-MM-DD HH:mm:ss.SSS Z'
+    error_file: ./logs/worker/error.log
+    out_file: ./logs/worker/console.log
+    pid_file: ./logs/worker/process.pid
+    merge_logs: true
+    instances: 4
+    exec_mode: 'cluster'
+  - script : ./app/modules/bccp/job-pull.js
+    name   : 'VNPOST-JOB-BCCP-PULL-PRO'
+    watch  : true
+    ignore_watch: [node_modules, logs, csvs, sessions, caches, bccpsessions]
+    log_date_format: 'ddd YYYY-MM-DD HH:mm:ss.SSS Z'
+    error_file: ./logs/bccp/job-pull/error.log
+    out_file: ./logs/bccp/job-pull/console.log
+    pid_file: ./logs/bccp/job-pull/process.pid
+    merge_logs: true
+  - script : ./app/modules/bccp/worker-pull.js
+    name   : 'VNPOST-WORKER-BCCP-PULL-PRO'
+    watch  : true
+    ignore_watch: [node_modules, logs, csvs, sessions, caches, bccpsessions]
+    log_date_format: 'ddd YYYY-MM-DD HH:mm:ss.SSS Z'
+    error_file: ./logs/bccp/worker-pull/error.log
+    out_file: ./logs/bccp/worker-pull/console.log
+    pid_file: ./logs/bccp/worker-pull/process.pid
+    merge_logs: true
+    instances: 4
+    exec_mode: 'cluster'
+  - script : ./app/modules/bccp/job.js
+    name   : 'VNPOST-JOB-BCCP-SF-PRO'
+    watch  : true
+    ignore_watch: [node_modules, logs, csvs, sessions, caches, bccpsessions]
+    log_date_format: 'ddd YYYY-MM-DD HH:mm:ss.SSS Z'
+    error_file: ./logs/bccp/job/error.log
+    out_file: ./logs/bccp/job/console.log
+    pid_file: ./logs/bccp/job/process.pid
+    merge_logs: true
+  - script : ./app/modules/bccp/worker.js
+    name   : 'VNPOST-WORKER-BCCP-SF-PRO'
+    watch  : true
+    ignore_watch: [node_modules, logs, csvs, sessions, caches, bccpsessions]
+    log_date_format: 'ddd YYYY-MM-DD HH:mm:ss.SSS Z'
+    error_file: ./logs/bccp/worker/error.log
+    out_file: ./logs/bccp/worker/console.log
+    pid_file: ./logs/bccp/worker/process.pid
+    merge_logs: true
+    instances: 6
+    exec_mode: 'cluster'
+  # - script : ./app/modules/paypost/job.js
+  #   name   : 'VNPOST-JOB-PAYPOST-PRO'
+  #   watch  : true
+  #   ignore_watch: [node_modules, logs, csvs, sessions, caches]
+  #   log_date_format: 'ddd YYYY-MM-DD HH:mm:ss.SSS Z'
+  #   error_file: ./logs/paypost/job/error.log
+  #   out_file: ./logs/paypost/job/console.log
+  #   pid_file: ./logs/paypost/job/process.pid
+  #   merge_logs: true
+  # - script : ./app/modules/paypost/worker.js
+  #   name   : 'VNPOST-WORKER-PAYPOST-PRO'
+  #   watch  : true
+  #   ignore_watch: [node_modules, logs, csvs, sessions, caches]
+  #   log_date_format: 'ddd YYYY-MM-DD HH:mm:ss.SSS Z'
+  #   error_file: ./logs/paypost/worker/error.log
+  #   out_file: ./logs/paypost/worker/console.log
+  #   pid_file: ./logs/paypost/worker/process.pid
+  #   merge_logs: true
+  #   instances: 1
+  #   exec_mode: 'cluster'
+  # - script : ./app/modules/suitecrm/job.js
+  #   name   : 'VNPOST-JOB-SUITECRM-PRO'
+  #   watch  : true
+  #   ignore_watch: [node_modules, logs, csvs, sessions, caches]
+  #   log_date_format: 'ddd YYYY-MM-DD HH:mm:ss.SSS Z'
+  #   error_file: ./logs/scrm/job/error.log
+  #   out_file: ./logs/scrm/job/console.log
+  #   pid_file: ./logs/scrm/job/process.pid
+  #   merge_logs: true
+  # - script : ./app/modules/suitecrm/worker.js
+  #   name   : 'VNPOST-WORKER-SUITECRM-PRO'
+  #   watch  : true
+  #   ignore_watch: [node_modules, logs, csvs, sessions, caches]
+  #   log_date_format: 'ddd YYYY-MM-DD HH:mm:ss.SSS Z'
+  #   error_file: ./logs/scrm/worker/error.log
+  #   out_file: ./logs/scrm/worker/console.log
+  #   pid_file: ./logs/scrm/worker/process.pid
+  #   merge_logs: true
+  #   instances: 'max'
+  #   exec_mode: 'cluster'
+  # - script : ./app/modules/suitecrm/stream.js
+  #   name   : 'VNPOST-STREAM-SUITECRM-PRO'
+  #   watch  : true
+  #   ignore_watch: [node_modules, logs, csvs, sessions, caches]
+  #   log_date_format: 'ddd YYYY-MM-DD HH:mm:ss.SSS Z'
+  #   error_file: ./logs/scrm/stream/error.log
+  #   out_file: ./logs/scrm/stream/console.log
+  #   pid_file: ./logs/scrm/stream/process.pid
+  #   merge_logs: true

@@ -1,0 +1,1572 @@
+swagger: "2.0"
+info:
+  description: "API manager with CTS Sales"
+  version: 1.0.0
+  title: API Manager
+basePath: /v1
+schemes:
+  - http
+  - https
+paths:
+  /oauth/password:
+    post:
+      tags:
+        - oauth
+      summary: Logs user into the system
+      description: ""
+      operationId: loginUser
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: body
+          in: body
+          description: The username and password for login
+          required: true
+          type: string
+          schema:
+            $ref: '#/definitions/User'
+      responses:
+        "200":
+          description: token
+          schema:
+            type: string
+          headers:
+            X-Rate-Limit:
+              type: integer
+              format: int32
+              description: calls per hour allowed by the user
+            X-Expires-After:
+              type: string
+              format: date-time
+              description: date when token expires
+        "400":
+          description: Invalid username/password supplied
+  /oauth/logout:
+    post:
+      tags:
+        - oauth
+      summary: Logs out current logged in user session
+      description: ""
+      operationId: logoutUser
+      produces:
+        - application/json
+        - application/xml
+      parameters: []
+      responses:
+        "200":
+          description: Successful operation
+        "400":
+          description: Not Logout
+      security:
+        - Bearer: []
+  "/service/search":
+    get:
+      tags:
+        - search
+      summary: Search data
+      description: Returns data
+      operationId: search
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: s
+          in: query
+          description: Filter
+          required: false
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+        "404":
+          description: Object not found
+      security:
+        - Bearer: []
+
+  "/service/parameterizedSearch":
+    get:
+      tags:
+        - search
+      summary: Search data using query parameter
+      description: Returns data
+      operationId: parameterizedSearch
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: s
+          in: query
+          description: search data using query parameter (manh&sobject=Opportunity&Opportunity.fields=id,name,StageName&Opportunity.limit=10)
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+        "404":
+          description: Object not found
+      security:
+        - Bearer: []
+    post:
+      tags:
+        - search
+      summary: Search data
+      description: ""
+      operationId: postParameterizedSearch
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: body
+          in: body
+          description: Data search
+          required: true
+          type: string
+          schema:
+            type: object
+            required:
+              - q
+            properties:
+              q:
+                type: string
+                example: hoang
+              fields:
+                type: array
+                example: ["id", "Name"]
+              sobjects:
+                type: array
+                example: [{"fields":["id", "Name"],"name": "Opportunity","limit":20}]
+              in:
+                type: string
+                example: ALL
+      responses:
+        default:
+          description: Successful operation
+      security:
+        - Bearer: []
+
+  "/service/query":
+    get:
+      tags:
+        - search
+      summary: Search data using query SQL
+      description: Returns data
+      operationId: query
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: s
+          in: query
+          description: Filter (select Name,AccountId,Amount,CampaignId,CloseDate,CurrentGenerators__c,DeliveryInstallationStatus__c,Description,NextStep,OrderNumber__c,Pricebook2Id,StageName,MainCompetitors__c,TrackingNumber__c from Opportunity)
+          required: false
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+        "404":
+          description: Object not found
+      security:
+        - Bearer: []
+
+  "/service/sobjects":
+    get:
+      tags:
+        - service
+      summary: Get sobject
+      description: Returns Object
+      operationId: sobjects
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      responses:
+        "200":
+          description: Successful operation
+        "404":
+          description: Object not found
+      security:
+        - Bearer: []
+          
+  "/service/sobjects/{sobject}":
+    get:
+      tags:
+        - service
+      summary: Get Retrieve Summary by sobject
+      description: Returns recent Item Object
+      operationId: retrieveSummary
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: sobject
+          in: path
+          description: sobject of Salesforce (Opportunity, Account ...)
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+        "404":
+          description: Object not found
+      security:
+        - Bearer: []
+
+  "/service/sobjects/{sobject}/listviews":
+    get:
+      tags:
+        - service
+      summary: Get ListView by sobject
+      description: Returns a multiple list view
+      operationId: listviews
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: sobject
+          in: path
+          description: sobject of Salesforce (Opportunity, Account ...)
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+        "404":
+          description: Object not found
+      security:
+        - Bearer: []
+
+  "/service/sobjects/{sobject}/describe":
+    get:
+      tags:
+        - service
+      summary: Get describe by sobject
+      description: Returns a multiple list view
+      operationId: describe
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: sobject
+          in: path
+          description: sobject of Salesforce (Opportunity, Account ...)
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+        "404":
+          description: Object not found
+      security:
+        - Bearer: []
+
+  /opportunity/list:
+    get:
+      tags:
+        - opportunity
+      summary: Finds Opportunity
+      description: "List Opportunity."
+      operationId: getOpportunity
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: q
+          in: query
+          description: Filter
+          required: false
+          type: string
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Opportunity"
+        "400":
+          description: Invalid tag value
+      security:
+        - Bearer: []
+  /opportunity/listQuery:
+    post:
+      tags:
+        - opportunity
+      summary: Finds Opportunity List Query
+      description: "List Opportunity List Query."
+      operationId: getOpportunityListQuery
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: body
+          in: body
+          description: The Opportunity
+          type: object
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Opportunity"
+        "400":
+          description: Invalid tag value
+      security:
+        - Bearer: []
+  /opportunity/listView:
+    get:
+      tags:
+        - opportunity
+      summary: Finds Opportunity List View
+      description: "List Opportunity List View."
+      operationId: getOpportunityListView
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: limit
+          in: query
+          description: Filter
+          required: false
+          type: string
+        - name: offset
+          in: query
+          description: Filter
+          required: false
+          type: string
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Opportunity"
+        "400":
+          description: Invalid tag value
+      security:
+        - Bearer: []
+  /opportunity/listRecordType:
+    get:
+      tags:
+        - opportunity
+      summary: Finds Opportunity RecordType
+      description: "List Opportunity RecordType."
+      operationId: getListRecordType
+      produces:
+        - application/json
+        - application/xml
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Opportunity"
+        "400":
+          description: Invalid tag value
+      security:
+        - Bearer: []
+  /opportunity/listStage:
+    get:
+      tags:
+        - opportunity
+      summary: Finds Opportunity Stage
+      description: "List Opportunity Stage."
+      operationId: getListStage
+      produces:
+        - application/json
+        - application/xml
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Opportunity"
+        "400":
+          description: Invalid tag value
+      security:
+        - Bearer: []
+  /opportunity/create:
+    post:
+      tags:
+        - opportunity
+      summary: Create a opportunity in the store with form data
+      operationId: createOpportunity
+      consumes:
+        - application/json
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: body
+          in: body
+          description: The data for create opportunity
+          required: true
+          type: string
+          schema:
+            $ref: '#/definitions/Opportunity'
+      responses:
+        "405":
+          description: Invalid input
+      security:
+        - Bearer: []
+  "/opportunity/{id}":
+    get:
+      tags:
+        - opportunity
+      summary: Find opportunity by ID
+      description: Returns a single opportunity
+      operationId: getOpportunityById
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: id
+          in: path
+          description: ID of opportunity to return
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+          schema:
+            $ref: "#/definitions/Opportunity"
+        "400":
+          description: Invalid ID supplied
+        "404":
+          description: Opportunity not found
+      security:
+        - Bearer: []
+    patch:
+      tags:
+        - opportunity
+      summary: Update a opportunity
+      operationId: updateOpportunity
+      consumes:
+        - application/json
+        - multipart/form-data
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          description: Opportunity id to update
+          required: true
+          type: string
+        - name: body
+          in: body
+          description: Opportunity body
+          required: true
+          type: string
+          schema:
+            $ref: '#/definitions/Opportunity'
+      responses:
+        "200":
+          description: successful operation
+        "400":
+          description: Invalid opportunity value
+      security:
+        - Bearer: []
+    delete:
+      tags:
+        - opportunity
+      summary: Deletes a opportunity
+      description: ""
+      operationId: deleteOpportunity
+      consumes:
+        - multipart/form-data
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: id
+          in: path
+          description: Opportunity id to delete
+          required: true
+          type: string
+      responses:
+        "200":
+          description: successful operation
+        "204":
+          description: Successful operation
+        "400":
+          description: Invalid opportunity value
+      security:
+        - Bearer: []
+  /user/list:
+    get:
+      tags:
+        - user
+      summary: Finds User
+      description: "List User."
+      operationId: getUser
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: q
+          in: query
+          description: Filter
+          required: false
+          type: string
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/User"
+        "400":
+          description: Invalid tag value
+      security:
+        - Bearer: []
+  /user/ownerDepartment:
+    get:
+      tags:
+        - user
+      summary: Find User
+      description: "User Owner Department."
+      operationId: ownerDepartment
+      produces:
+        - application/json
+        - application/xml
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/User"
+        "400":
+          description: Invalid tag value
+      security:
+        - Bearer: []
+  /user/businessUnit:
+    get:
+      tags:
+        - user
+      summary: Find User
+      description: "User Business Unit."
+      operationId: businessUnit
+      produces:
+        - application/json
+        - application/xml
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/User"
+        "400":
+          description: Invalid tag value
+      security:
+        - Bearer: []
+  "/user/{id}":
+    get:
+      tags:
+        - user
+      summary: Find user by ID
+      description: Returns a single user
+      operationId: getUserById
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: id
+          in: path
+          description: ID of user to return
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+          schema:
+            $ref: "#/definitions/User"
+        "400":
+          description: Invalid ID supplied
+        "404":
+          description: User not found
+      security:
+        - Bearer: []
+  /account/list:
+    get:
+      tags:
+        - account
+      summary: Finds Account
+      description: "List Account."
+      operationId: getAccount
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: q
+          in: query
+          description: Filter
+          required: false
+          type: string
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Account"
+        "400":
+          description: Invalid tag value
+      security:
+        - Bearer: []
+  "/account/{id}":
+    get:
+      tags:
+        - account
+      summary: Find account by ID
+      description: Returns a single account
+      operationId: getAccountById
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: id
+          in: path
+          description: ID of account to return
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+          schema:
+            $ref: "#/definitions/Account"
+        "400":
+          description: Invalid ID supplied
+        "404":
+          description: Account not found
+      security:
+        - Bearer: []
+  /approval/list:
+    get:
+      tags:
+        - approval
+      summary: Finds approval
+      description: "List approval."
+      operationId: getApproval
+      produces:
+        - application/json
+        - application/xml
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Approval"
+        "400":
+          description: Invalid tag value
+      security:
+        - Bearer: []
+  /approval:
+    post:
+      tags:
+        - approval
+      summary: Create a approval in the store with form data
+      operationId: createApproval
+      consumes:
+        - application/json
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: body
+          in: body
+          description: The data for create approval
+          required: true
+          type: string
+          schema:
+            $ref: '#/definitions/Approval'
+      responses:
+        "405":
+          description: Invalid input
+      security:
+        - Bearer: []
+  
+  "/content-note/list/{opportunityId}":
+    get:
+      tags:
+        - content-note
+      summary: Find ContentNote by ID
+      description: Returns a single ContentNote
+      operationId: getOpportunityById
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: opportunityId
+          in: path
+          description: ID of Opportunity to return
+          required: true
+          type: string
+        - name: limit
+          in: query
+          description: Filter
+          required: false
+          type: string
+        - name: offset
+          in: query
+          description: Filter
+          required: false
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+          schema:
+            $ref: "#/definitions/ContentNote"
+        "400":
+          description: Invalid ID supplied
+        "404":
+          description: ContentNote not found
+      security:
+        - Bearer: []
+
+  /content-note/count/{opportunityId}:
+    get:
+      tags:
+        - content-note
+      summary: Count content note by opportunity id
+      description: Returns a total content note
+      operationId: countContentNoteByOppId
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: opportunityId
+          in: path
+          description: ID of Opportunity
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+          schema:
+            $ref: "#/definitions/ContentNote"
+        "400":
+          description: Invalid ID supplied
+        "404":
+          description: Content note not found
+      security:
+        - Bearer: []
+
+  "/content-note/{id}":
+    get:
+      tags:
+        - content-note
+      summary: Find ContentNote by ID
+      description: Returns a single ContentNote
+      operationId: getContentNoteById
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: id
+          in: path
+          description: ID of ContentNote to return
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+          schema:
+            $ref: "#/definitions/ContentNote"
+        "400":
+          description: Invalid ID supplied
+        "404":
+          description: ContentNote not found
+      security:
+        - Bearer: []
+    patch:
+      tags:
+        - content-note
+      summary: Update a content note
+      operationId: updateContentNote
+      consumes:
+        - application/json
+        - multipart/form-data
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          description: ContentNote id to update
+          required: true
+          type: string
+        - name: body
+          in: body
+          description: ContentNote body
+          required: true
+          type: string
+          schema:
+            $ref: '#/definitions/ContentNote'
+      responses:
+        "200":
+          description: successful operation
+        "400":
+          description: Invalid opportunity value
+      security:
+        - Bearer: []
+    delete:
+      tags:
+        - content-note
+      summary: Delete a ContentNote
+      description: ""
+      operationId: deleteContentNote
+      consumes:
+        - multipart/form-data
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: id
+          in: path
+          description: ContentNote id to delete
+          required: true
+          type: string
+      responses:
+        "204":
+          description: Successful operation
+        "400":
+          description: Invalid ContentNote value
+      security:
+        - Bearer: []
+
+  "/content-note/{id}/content":
+    get:
+      tags:
+        - content-note
+      summary: Find ContentNote Content by ID
+      description: Returns a single ContentNote
+      operationId: getContentNoteContentById
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: id
+          in: path
+          description: ID of ContentNote to return
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+          schema:
+            $ref: "#/definitions/ContentNoteContent"
+        "404":
+          description: ContentNoteContent not found
+      security:
+        - Bearer: []
+
+  /content-note:
+    post:
+      tags:
+        - content-note
+      summary: Create many ContentNote in the store with body
+      operationId: createMultipleContentNote
+      consumes:
+        - application/json
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: oIds
+          in: query
+          description: List Id of Opportunity to return
+          required: false
+          type: string
+        - name: body
+          in: body
+          description: The data for create ContentNote
+          required: true
+          type: string
+          schema:
+            $ref: '#/definitions/ContentNote'
+      responses:
+        "405":
+          description: Invalid input
+      security:
+        - Bearer: []
+
+  /content-note/{opportunityId}:
+    post:
+      tags:
+        - content-note
+      summary: Create a ContentNote in the store with body
+      operationId: createContentNote
+      consumes:
+        - application/json
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: opportunityId
+          in: path
+          description: ID of Opportunity to return
+          required: true
+          type: string
+        - name: body
+          in: body
+          description: The data for create ContentNote
+          required: true
+          type: string
+          schema:
+            $ref: '#/definitions/ContentNote'
+      responses:
+        "405":
+          description: Invalid input
+      security:
+        - Bearer: []
+
+  /content-note/multiple/contentDocumentLink:
+    post:
+      tags:
+        - content-note
+      summary: Create many ContentDocumentLink
+      operationId: createContentDocumentLink
+      consumes:
+        - application/json
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: id
+          in: query
+          description: Id of ContentNote
+          required: true
+          type: string
+        - name: oIds
+          in: query
+          description: List Id of Opportunity to return
+          required: true
+          type: string
+      responses:
+        "405":
+          description: Invalid input
+      security:
+        - Bearer: []
+
+  /document/list/{opportunityId}:
+    get:
+      tags:
+        - document
+      summary: Find Document by Opportunity Id
+      description: Returns a list Document
+      operationId: getDocumentByOppId
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: opportunityId
+          in: path
+          description: ID of Opportunity to return
+          required: true
+          type: string
+        - name: limit
+          in: query
+          description: Filter
+          required: false
+          type: string
+        - name: offset
+          in: query
+          description: Filter
+          required: false
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+          schema:
+            $ref: "#/definitions/Document"
+        "400":
+          description: Invalid ID supplied
+        "404":
+          description: Document not found
+      security:
+        - Bearer: []
+
+  /document/count/{opportunityId}:
+    get:
+      tags:
+        - document
+      summary: Count Document by Opportunity Id
+      description: Returns a total Document
+      operationId: countDocumentByOppId
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: opportunityId
+          in: path
+          description: ID of Opportunity
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+          schema:
+            $ref: "#/definitions/Document"
+        "400":
+          description: Invalid ID supplied
+        "404":
+          description: Document not found
+      security:
+        - Bearer: []
+
+  /document:
+    post:
+      tags:
+        - document
+      summary: Create a Document
+      operationId: createDocument
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: body
+          in: body
+          description: The data for create document
+          required: true
+          type: string
+          schema:
+            $ref: '#/definitions/Document'
+      responses:
+        "405":
+          description: Invalid input
+      security:
+        - Bearer: []
+  /document/{id}:
+    get:
+      tags:
+        - document
+      summary: Find Document by ID
+      description: Returns a single Document
+      operationId: getDocumentById
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: id
+          in: path
+          description: ID of Document to return
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+          schema:
+            $ref: "#/definitions/Document"
+        "400":
+          description: Invalid ID supplied
+        "404":
+          description: Document not found
+      security:
+        - Bearer: []
+    patch:
+      tags:
+        - document
+      summary: Update a document
+      operationId: updateDocument
+      consumes:
+        - application/json
+        - multipart/form-data
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          description: Document id to update
+          required: true
+          type: string
+        - name: body
+          in: body
+          description: Document body
+          required: true
+          type: string
+          schema:
+            $ref: '#/definitions/Document'
+      responses:
+        "200":
+          description: successful operation
+        "400":
+          description: Invalid document value
+      security:
+        - Bearer: []
+    delete:
+      tags:
+        - document
+      summary: Delete a Document
+      description: ""
+      operationId: deleteDocument
+      consumes:
+        - multipart/form-data
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: id
+          in: path
+          description: Document id to delete
+          required: true
+          type: string
+      responses:
+        "204":
+          description: Successful operation
+        "400":
+          description: Invalid Document value
+      security:
+        - Bearer: []
+
+  /quote/list/{opportunityId}:
+    get:
+      tags:
+        - quote
+      summary: Find quote by Opportunity Id
+      description: Returns a list quote
+      operationId: getQuoteByOppId
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: opportunityId
+          in: path
+          description: ID of Opportunity
+          required: true
+          type: string
+        - name: limit
+          in: query
+          description: Filter
+          required: false
+          type: string
+        - name: offset
+          in: query
+          description: Filter
+          required: false
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+          schema:
+            $ref: "#/definitions/Quote"
+        "400":
+          description: Invalid ID supplied
+        "404":
+          description: quote not found
+      security:
+        - Bearer: []
+
+  /quote/count/{opportunityId}:
+    get:
+      tags:
+        - quote
+      summary: Count quote by Opportunity Id
+      description: Returns a total quote
+      operationId: countQuoteByOppId
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: opportunityId
+          in: path
+          description: ID of Opportunity
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+          schema:
+            $ref: "#/definitions/Quote"
+        "400":
+          description: Invalid ID supplied
+        "404":
+          description: quote not found
+      security:
+        - Bearer: []
+
+  /quote:
+    post:
+      tags:
+        - quote
+      summary: Create a quote
+      operationId: createQuote
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: body
+          in: body
+          description: The data for create quote
+          required: true
+          type: string
+          schema:
+            $ref: '#/definitions/Quote'
+      responses:
+        "405":
+          description: Invalid input
+      security:
+        - Bearer: []
+  /quote/{id}:
+    get:
+      tags:
+        - quote
+      summary: Find quote by ID
+      description: Returns a single quote
+      operationId: getQuoteById
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: id
+          in: path
+          description: ID of quote to return
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+          schema:
+            $ref: "#/definitions/Quote"
+        "400":
+          description: Invalid ID supplied
+        "404":
+          description: quote not found
+      security:
+        - Bearer: []
+    patch:
+      tags:
+        - quote
+      summary: Update a quote
+      operationId: updateQuote
+      consumes:
+        - application/json
+        - multipart/form-data
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          description: quote id to update
+          required: true
+          type: string
+        - name: body
+          in: body
+          description: Quote body
+          required: true
+          type: string
+          schema:
+            $ref: '#/definitions/Quote'
+      responses:
+        "200":
+          description: successful operation
+        "400":
+          description: Invalid quote value
+      security:
+        - Bearer: []
+    delete:
+      tags:
+        - quote
+      summary: Delete a quote
+      description: ""
+      operationId: deleteQuote
+      consumes:
+        - multipart/form-data
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: id
+          in: path
+          description: Quote id to delete
+          required: true
+          type: string
+      responses:
+        "204":
+          description: Successful operation
+        "400":
+          description: Invalid quote value
+      security:
+        - Bearer: []
+
+  /composite/sobjects:
+    delete:
+      tags:
+        - composite
+      summary: Delete many sobjects in the store with body
+      operationId: deleteSobjects
+      consumes:
+        - application/json
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: ids
+          in: query
+          description: ID of objects to return
+          required: true
+          type: string
+      responses:
+        "405":
+          description: Invalid input
+      security:
+        - Bearer: []
+        
+  /campaign/list:
+    get:
+      tags:
+        - campaign
+      summary: Finds Campaign
+      description: "List Campaign."
+      operationId: getCampaign
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: q
+          in: query
+          description: Filter
+          required: false
+          type: string
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Campaign"
+        "400":
+          description: Invalid tag value
+      security:
+        - Bearer: []
+  "/campaign/{id}":
+    get:
+      tags:
+        - campaign
+      summary: Find Campaign by ID
+      description: Returns a single campaign
+      operationId: getAccountById
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: id
+          in: path
+          description: ID of campaign to return
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+          schema:
+            $ref: "#/definitions/Campaign"
+        "400":
+          description: Invalid ID supplied
+        "404":
+          description: Campaign not found
+      security:
+        - Bearer: []
+  "/test/session":
+    get:
+      tags:
+        - test
+      summary: Find Session by ID
+      description: Returns a single session
+      operationId: getSession
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+        - application/xml
+      responses:
+        "200":
+          description: Successful operation
+        "400":
+          description: Invalid ID supplied
+        "404":
+          description: Session not found
+      security:
+        - Bearer: []
+definitions:
+  User:
+    type: object
+    properties:
+      username:
+        type: string
+        example: develop-cts@yopmail.com
+      password:
+        type: string
+        example: cts@123456
+    xml:
+      name: User
+  Opportunity:
+    type: object
+    properties:
+      Name:
+        description: Name
+        type: string
+        example: "Opportunity Test"
+      Description:
+        description: Description
+        type: string
+        example: "Opportunity Description"
+      AccountId:
+        description: AccountId
+        type: string
+        example: "0010w00000688xGAAQ"
+      Amount:
+        description: Amount
+        type: string
+        example: "890000000"
+      CloseDate:
+        description: CloseDate
+        type: string
+        example: "2019-11-11T00:00:00.000Z"
+      NextStep:
+        description: NextStep
+        type: string
+        example: ""
+      Pricebook2Id:
+        description: Pricebook2Id
+        type: string
+        example: ""
+      StageName:
+        description: StageName
+        type: string
+        example: "Recognizing Needs"
+      Expected_Profit__c:
+        description: Expected_Profit__c
+        type: string
+        example: "10"
+      Bid_Open_Date__c:
+        description: Bid_Open_Date__c
+        type: string
+        example: "2019-06-19T00:00:00.000Z"
+      Bid_Close_Date__c:
+        description: Bid_Close_Date__c
+        type: string
+        example: "2019-09-19T00:00:00.000Z"
+        
+    xml:
+      name: Opportunity
+  ContentNote:
+    type: object
+    properties:
+      Title:
+        type: string
+        example: Content Note Test
+  Document:
+    type: object
+    properties:
+      Name:
+        type: string
+        example: Name
+      Link__c:
+        type: string
+        example: http://cmcts.com.vn/document
+      Opportunity__c:
+        type: string
+        example: 0060w000002j6vxAAA
+  Quote:
+    type: object
+    properties:
+      Name:
+        type: string
+        example: Name
+      AccountId:
+        type: string
+        example: 0060w000002j6vxAAA
+      OpportunityId:
+        type: string
+        example: 0060w000002j6vxAAA
+      ContactId:
+        type: string
+        example: 0060w000002j6vxAAA
+      Description:
+        type: string
+        example: Description
+      Status:
+        type: string
+        example: Needs Review
+      ExpirationDate:
+        type: string
+        example: 2019-06-25T06:54:49.000+0000
+      ShippingHandling:
+        type: string
+        example: Shipping
+      Phone:
+        type: string
+        example: Phone
+      Email:
+        type: string
+        example: Email
+        
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    name: Authorization
+    in: header
+
+components:
+  schemas:
+    ContentDLCreate:
+      properties:
+        statusCode:
+          type: integer
+        statusMessage:
+          type: string
+        body: object

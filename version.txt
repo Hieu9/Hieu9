@@ -1,0 +1,10 @@
+-- Redis
+$ redis-server --version
+Redis server v=5.0.8 sha=00000000:0 malloc=jemalloc-5.1.0 bits=64 build=f5de7c59791f2d0a
+-- Postgresql
+11.7.0
+-- Node
+$ node -v
+v11.15.0
+$ npm -v
+6.7.0

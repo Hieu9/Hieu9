@@ -1,0 +1,1031 @@
+{
+	"info": {
+		"_postman_id": "9bf996b9-8eee-476b-bbb2-729f717a72c4",
+		"name": "VNPOST GATEWAY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Case",
+			"item": [
+				{
+					"name": "/case",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/case",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"{{VERSION}}",
+								"case"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/case",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"AccountId\": \"\",\r\n\t\"BusinessHoursId\": \"\",\r\n\t\"Case_Reference_Code__c\": \"\",\r\n\t\"Check_Duplicate_Subjects__c\": \"\",\r\n\t\"Chi_Tra_Boi_Thuong__c\": \"Đã chi trả\",\r\n\t\"Comments\": \"\",\r\n\t\"ContactId\": \"\",\r\n\t\"Co_Boi_Thuong__c\": \"\",\r\n\t\"CurrencyIsoCode\": \"\",\r\n\t\"Description\": \"Description\",\r\n\t\"Doi_Tac_Vi_Pham__c\": \"\",\r\n\t\"Don_Vi_Chi_Tra_BT_Cho_KH__c\": \"\",\r\n\t\"Don_Vi_Vi_Pham__c\": \"\",\r\n\t\"Employee__c\": \"\",\r\n\t\"EntitlementId\": \"\",\r\n\t\"IsEscalated\": \"\",\r\n\t\"Ket_Qua_Dieu_Tra_Cua_Doi_Tac__c\": \"Đồng ý\",\r\n\t\"Ket_Qua_Khieu_Nai__c\": \"\",\r\n\t\"Li_do_khieu_nai__c\": \"\",\r\n\t\"Li_Do_Mo_Lai__c\": \"\",\r\n\t\"Location_Type__c\": \"Domestic\",\r\n\t\"Nhan_vien_CSKH__c\": \"\",\r\n\t\"Nhom_dich_vu__c\": \"Bưu chính chuyển phát\",\r\n\t\"Noi_dung_ho_tro__c\": \"Phát thư chuyển tiền gấp\",\r\n\t\"Noi_dung_ket_luan__c\": \"\",\r\n\t\"Noi_dung_tu_van__c\": \"\",\r\n\t\"Noi_Dung_Vi_Pham__c\": \"\",\r\n\t\"Origin\": \"Email\",\r\n\t\"ParentId\": \"\",\r\n\t\"Pha_p_nh_n__c\": \"\",\r\n\t\"POS__c\": \"\",\r\n\t\"Priority\": \"Cao\",\r\n\t\"QDBT__c\": \"string\",\r\n\t\"Reason\": \"Yêu cầu hỗ trợ\",\r\n\t\"Sales_Order__c\": \"\",\r\n\t\"Service__c\": \"\",\r\n\t\"SourceId\": \"\",\r\n\t\"So_Ho_So__c\": \"\",\r\n\t\"So_phieu_khieu_nai__c\": \"\",\r\n\t\"So_Tien_Phai_Boi_Thuong__c\": \"\",\r\n\t\"Status\": \"Mới tạo\",\r\n\t\"Subject\": \"YYY Test 2019\",\r\n\t\"SuppliedCompany\": \"\",\r\n\t\"SuppliedEmail\": \"\",\r\n\t\"SuppliedName\": \"\",\r\n\t\"SuppliedPhone\": \"\",\r\n\t\"S_quy_t_i_nh_BT__c\": \"\",\r\n\t\"Tai_Lieu_Dinh_Kem__c\": \"\",\r\n\t\"Ngay_Boi_Thuong__c\": \"2019-11-22\",\r\n\t\"Thoi_gian1__c\": \"2019-11-12T05:00:00.000+0000\",\r\n\t\"Type\": \"Yêu cầu tư vấn, sử dụng dịch vụ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/case",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"{{VERSION}}",
+								"case"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/case/{id}",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"AccountId\": \"\",\r\n\t\"BusinessHoursId\": \"\",\r\n\t\"Case_Reference_Code__c\": \"\",\r\n\t\"Check_Duplicate_Subjects__c\": \"\",\r\n\t\"Chi_Tra_Boi_Thuong__c\": \"Đã chi trả\",\r\n\t\"Comments\": \"\",\r\n\t\"ContactId\": \"\",\r\n\t\"Co_Boi_Thuong__c\": \"\",\r\n\t\"CurrencyIsoCode\": \"\",\r\n\t\"Description\": \"Description\",\r\n\t\"Doi_Tac_Vi_Pham__c\": \"\",\r\n\t\"Don_Vi_Chi_Tra_BT_Cho_KH__c\": \"\",\r\n\t\"Don_Vi_Vi_Pham__c\": \"\",\r\n\t\"Employee__c\": \"\",\r\n\t\"EntitlementId\": \"\",\r\n\t\"IsEscalated\": \"\",\r\n\t\"Ket_Qua_Dieu_Tra_Cua_Doi_Tac__c\": \"Đồng ý\",\r\n\t\"Ket_Qua_Khieu_Nai__c\": \"\",\r\n\t\"Li_do_khieu_nai__c\": \"\",\r\n\t\"Li_Do_Mo_Lai__c\": \"\",\r\n\t\"Location_Type__c\": \"Domestic\",\r\n\t\"Nhan_vien_CSKH__c\": \"\",\r\n\t\"Nhom_dich_vu__c\": \"Bưu chính chuyển phát\",\r\n\t\"Noi_dung_ho_tro__c\": \"Phát thư chuyển tiền gấp\",\r\n\t\"Noi_dung_ket_luan__c\": \"\",\r\n\t\"Noi_dung_tu_van__c\": \"\",\r\n\t\"Noi_Dung_Vi_Pham__c\": \"\",\r\n\t\"Origin\": \"Email\",\r\n\t\"ParentId\": \"\",\r\n\t\"Pha_p_nh_n__c\": \"\",\r\n\t\"POS__c\": \"\",\r\n\t\"Priority\": \"Cao\",\r\n\t\"QDBT__c\": \"string\",\r\n\t\"Reason\": \"Yêu cầu hỗ trợ\",\r\n\t\"Sales_Order__c\": \"\",\r\n\t\"Service__c\": \"\",\r\n\t\"SourceId\": \"\",\r\n\t\"So_Ho_So__c\": \"\",\r\n\t\"So_phieu_khieu_nai__c\": \"\",\r\n\t\"So_Tien_Phai_Boi_Thuong__c\": \"\",\r\n\t\"Status\": \"Mới tạo\",\r\n\t\"Subject\": \"YYY Test 2019\",\r\n\t\"SuppliedCompany\": \"\",\r\n\t\"SuppliedEmail\": \"\",\r\n\t\"SuppliedName\": \"\",\r\n\t\"SuppliedPhone\": \"\",\r\n\t\"S_quy_t_i_nh_BT__c\": \"\",\r\n\t\"Tai_Lieu_Dinh_Kem__c\": \"\",\r\n\t\"Ngay_Boi_Thuong__c\": \"2019-11-22\",\r\n\t\"Thoi_gian1__c\": \"2019-11-12T05:00:00.000+0000\",\r\n\t\"Type\": \"Yêu cầu tư vấn, sử dụng dịch vụ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/case/5001y000000voDoAAI",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"{{VERSION}}",
+								"case",
+								"5001y000000voDoAAI"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/case/{id}",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/case/5001y000000vpE4AAI",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"{{VERSION}}",
+								"case",
+								"5001y000000vpE4AAI"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Vi_pham__c",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/Vi_pham__c",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"{{VERSION}}",
+								"Vi_pham__c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Vi_pham__c",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"AccountId\": \"\",\r\n\t\"BusinessHoursId\": \"\",\r\n\t\"Case_Reference_Code__c\": \"\",\r\n\t\"Check_Duplicate_Subjects__c\": \"\",\r\n\t\"Chi_Tra_Boi_Thuong__c\": \"Đã chi trả\",\r\n\t\"Comments\": \"\",\r\n\t\"ContactId\": \"\",\r\n\t\"Co_Boi_Thuong__c\": \"\",\r\n\t\"CurrencyIsoCode\": \"\",\r\n\t\"Description\": \"Description\",\r\n\t\"Doi_Tac_Vi_Pham__c\": \"\",\r\n\t\"Don_Vi_Chi_Tra_BT_Cho_KH__c\": \"\",\r\n\t\"Don_Vi_Vi_Pham__c\": \"\",\r\n\t\"Employee__c\": \"\",\r\n\t\"EntitlementId\": \"\",\r\n\t\"IsEscalated\": \"\",\r\n\t\"Ket_Qua_Dieu_Tra_Cua_Doi_Tac__c\": \"Đồng ý\",\r\n\t\"Ket_Qua_Khieu_Nai__c\": \"\",\r\n\t\"Li_do_khieu_nai__c\": \"\",\r\n\t\"Li_Do_Mo_Lai__c\": \"\",\r\n\t\"Location_Type__c\": \"Domestic\",\r\n\t\"Nhan_vien_CSKH__c\": \"\",\r\n\t\"Nhom_dich_vu__c\": \"Bưu chính chuyển phát\",\r\n\t\"Noi_dung_ho_tro__c\": \"Phát thư chuyển tiền gấp\",\r\n\t\"Noi_dung_ket_luan__c\": \"\",\r\n\t\"Noi_dung_tu_van__c\": \"\",\r\n\t\"Noi_Dung_Vi_Pham__c\": \"\",\r\n\t\"Origin\": \"Email\",\r\n\t\"ParentId\": \"\",\r\n\t\"Pha_p_nh_n__c\": \"\",\r\n\t\"POS__c\": \"\",\r\n\t\"Priority\": \"Cao\",\r\n\t\"QDBT__c\": \"string\",\r\n\t\"Reason\": \"Yêu cầu hỗ trợ\",\r\n\t\"Sales_Order__c\": \"\",\r\n\t\"Service__c\": \"\",\r\n\t\"SourceId\": \"\",\r\n\t\"So_Ho_So__c\": \"\",\r\n\t\"So_phieu_khieu_nai__c\": \"\",\r\n\t\"So_Tien_Phai_Boi_Thuong__c\": \"\",\r\n\t\"Status\": \"Mới tạo\",\r\n\t\"Subject\": \"HHH Test 6\",\r\n\t\"SuppliedCompany\": \"\",\r\n\t\"SuppliedEmail\": \"\",\r\n\t\"SuppliedName\": \"\",\r\n\t\"SuppliedPhone\": \"\",\r\n\t\"S_quy_t_i_nh_BT__c\": \"\",\r\n\t\"Tai_Lieu_Dinh_Kem__c\": \"\",\r\n\t\"Type\": \"Yêu cầu tư vấn, sử dụng dịch vụ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/Vi_pham__c",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"{{VERSION}}",
+								"Vi_pham__c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Vi_pham__c/{id}",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Case_Number__c\": \"\",\r\n\t\"CurrencyIsoCode\": \"\",\r\n\t\"Khu_vi_phm__c\": \"\",\r\n\t\"Li_vi_phm__c\": \"\",\r\n\t\"Name\": \"\",\r\n\t\"Ni_dung_vi_phm__c\": \"\",\r\n\t\"n_v_i_tac_vi_phm__c\": \"\",\r\n\t\"OwnerId\": \"\",\r\n\t\"S_tin_bi_thng__c\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/Vi_pham__c/0010k00000wMZ0bAAG",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"{{VERSION}}",
+								"Vi_pham__c",
+								"0010k00000wMZ0bAAG"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Vi_pham__c/{id}",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Id\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/Vi_pham__c/{id}",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"{{VERSION}}",
+								"Vi_pham__c",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "/account",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/account",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"{{VERSION}}",
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/account",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"AccountSource\": null,\r\n    \"AnnualRevenue\": null,\r\n    \"BillingCity\": null,\r\n    \"BillingCountry\": null,\r\n    \"BillingGeocodeAccuracy\": null,\r\n    \"BillingLatitude\": null,\r\n    \"BillingLongitude\": null,\r\n    \"BillingPostalCode\": null,\r\n    \"BillingState\": null,\r\n    \"BillingStreet\": null,\r\n    \"BusinessClass__c\": null,\r\n    \"BusinessID__c\": null,\r\n    \"Ca_nh_n_T_ch_c__c\": \"1\",\r\n    \"CurrencyIsoCode\": \"VND\",\r\n    \"Customer_s_Service__c\": null,\r\n    \"Description\": null,\r\n    \"Email__c\": \"abc.company@gmail.com\",\r\n    \"Employee__c\": null,\r\n    \"External_Name__c\": null,\r\n    \"Facebook__c\": null,\r\n    \"ID_he_thong_cu__c\": null,\r\n    \"Industry\": \"Agriculture\",\r\n    \"Jigsaw\": null,\r\n    \"Ma_dang_ki_kinh_doanh__c\": null,\r\n    \"Mobile__c\": \"0123456789\",\r\n    \"Name\": \"CMCTS Account 4\",\r\n    \"NCS_TestData__Populated__c\": false,\r\n    \"NCS_TestData__PopulateName__c\": null,\r\n    \"Nga_y_tha_nh_l_p__c\": null,\r\n    \"NumberOfEmployees\": null,\r\n    \"OwnerId\": \"0052v00000ZMRv9AAH\",\r\n    \"OwnerPay__c\": null,\r\n    \"Ownership\": \"Công ty TNHH\",\r\n    \"ParentId\": null,\r\n    \"Phone\": \"0123456789\",\r\n    \"Post_Office__c\": null,\r\n    \"ShippingCity\": null,\r\n    \"ShippingCountry\": null,\r\n    \"ShippingGeocodeAccuracy\": null,\r\n    \"ShippingLatitude\": null,\r\n    \"ShippingLongitude\": null,\r\n    \"ShippingPostalCode\": null,\r\n    \"ShippingState\": null,\r\n    \"ShippingStreet\": null,\r\n    \"SicDesc\": null,\r\n    \"So_tai_khoan_ngan_hang__c\": null,\r\n    \"Status__c\": null,\r\n    \"TaxCode__c\": null,\r\n    \"Ten_chu_tai_khoan__c\": null,\r\n    \"Ten_ngan_hang__c\": null,\r\n    \"Type\": \"Đối tác\",\r\n    \"Website\": null,\r\n    \"Zalo__c\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/account",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"{{VERSION}}",
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/account/{id}",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Id\": \"0010k00000wMZ0bAAG\",\r\n\t\"Name\":\"Hoang Nguyen\",\r\n\t\"BillingCity\":\"Hanoi\",\r\n\t\"BillingCountry\":\"Viet Nam\",\r\n\t\"BillingStreet\":\"12 Duy Tan\",\r\n\t\"CurrencyIsoCode\":\"\",\r\n\t\"AccountNumber\":\"\",\r\n\t\"OwnerId\":\"0052v00000ZNQhjAAH\",\r\n\t\"AccountSource\":\"\",\r\n\t\"AnnualRevenue\":\"\",\r\n\t\"BusinessClass__c\":\"\",\r\n\t\"BusinessID__c\":\"\",\r\n\t\"Customer_s_Service__c\":\"\",\r\n\t\"CustomerID__c\":\"\",\r\n\t\"Jigsaw\":\"\",\r\n\t\"Description\":\"\",\r\n\t\"Email__c\":\"\",\r\n\t\"Employee__c\":\"\",\r\n\t\"NumberOfEmployees\":\"\",\r\n\t\"External_Name__c\":\"\",\r\n\t\"Industry\":\"\",\r\n\t\"Mobile__c\":\"0352342859\",\r\n\t\"OwnerPay__c\":\"\",\r\n\t\"Ownership\":\"\",\r\n\t\"ParentId\":\"\",\r\n\t\"Phone\":\"\",\r\n\t\"NCS_TestData__PopulateName__c\":\"\",\r\n\t\"NCS_TestData__Populated__c\":\"\",\r\n\t\"Post_Office__c\":\"\",\r\n\t\"Referent_account__c\":\"\",\r\n\t\"SicDesc\":\"\",\r\n\t\"Status__c\":\"\",\r\n\t\"TaxCode__c\":\"\",\r\n\t\"Type\":\"\",\r\n\t\"Website\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/account/0010k00000wMZ0bAAG",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"{{VERSION}}",
+								"account",
+								"0010k00000wMZ0bAAG"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/account/{id}",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Id\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/account/{id}",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"{{VERSION}}",
+								"account",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Lead",
+			"item": [
+				{
+					"name": "/lead",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/lead",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"{{VERSION}}",
+								"lead"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/lead",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"AnnualRevenue\": 0,\r\n    \"City\": null,\r\n    \"Company\": \"CMC\",\r\n    \"Country\": null,\r\n    \"CurrencyIsoCode\": \"VND\",\r\n    \"Description\": null,\r\n    \"Email\": null,\r\n    \"Employee__c\": null,\r\n    \"Fax\": null,\r\n    \"FirstName\": null,\r\n    \"GeocodeAccuracy\": null,\r\n    \"Industry\": \"Other\",\r\n    \"IsConverted\": false,\r\n    \"IsUnreadByOwner\": true,\r\n    \"Jigsaw\": null,\r\n    \"LastName\": \"Lead 4\",\r\n    \"Latitude\": null,\r\n    \"LeadSource\": \"Other\",\r\n    \"Longitude\": null,\r\n    \"MiddleName\": null,\r\n    \"MobilePhone\": null,\r\n    \"NCS_TestData__Populated__c\": false,\r\n    \"NumberOfEmployees\": null,\r\n    \"OwnerId\": \"0052v00000YWSCAAA5\",\r\n    \"Phone\": null,\r\n    \"PostalCode\": null,\r\n    \"Rating\": \"Hot\",\r\n    \"Salutation\": null,\r\n    \"State\": null,\r\n    \"Status\": \"New\",\r\n    \"Street\": null,\r\n    \"Suffix\": null,\r\n    \"Title\": null,\r\n    \"Website\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/lead",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"{{VERSION}}",
+								"lead"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/lead/{id}",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Id\": \"0010k00000wMZ0bAAG\",\r\n\t\"Name\":\"Hoang Nguyen\",\r\n\t\"BillingCity\":\"Hanoi\",\r\n\t\"BillingCountry\":\"Viet Nam\",\r\n\t\"BillingStreet\":\"12 Duy Tan\",\r\n\t\"CurrencyIsoCode\":\"\",\r\n\t\"AccountNumber\":\"\",\r\n\t\"OwnerId\":\"0052v00000ZNQhjAAH\",\r\n\t\"AccountSource\":\"\",\r\n\t\"AnnualRevenue\":\"\",\r\n\t\"BusinessClass__c\":\"\",\r\n\t\"BusinessID__c\":\"\",\r\n\t\"Customer_s_Service__c\":\"\",\r\n\t\"CustomerID__c\":\"\",\r\n\t\"Jigsaw\":\"\",\r\n\t\"Description\":\"\",\r\n\t\"Email__c\":\"\",\r\n\t\"Employee__c\":\"\",\r\n\t\"NumberOfEmployees\":\"\",\r\n\t\"External_Name__c\":\"\",\r\n\t\"Industry\":\"\",\r\n\t\"Mobile__c\":\"0352342859\",\r\n\t\"OwnerPay__c\":\"\",\r\n\t\"Ownership\":\"\",\r\n\t\"ParentId\":\"\",\r\n\t\"Phone\":\"\",\r\n\t\"NCS_TestData__PopulateName__c\":\"\",\r\n\t\"NCS_TestData__Populated__c\":\"\",\r\n\t\"Post_Office__c\":\"\",\r\n\t\"Referent_account__c\":\"\",\r\n\t\"SicDesc\":\"\",\r\n\t\"Status__c\":\"\",\r\n\t\"TaxCode__c\":\"\",\r\n\t\"Type\":\"\",\r\n\t\"Website\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/lead/0010k00000wMZ0bAAG",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"{{VERSION}}",
+								"lead",
+								"0010k00000wMZ0bAAG"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/lead/{id}",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Id\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/lead/{id}",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"{{VERSION}}",
+								"lead",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Sales_Order__c",
+			"item": [
+				{
+					"name": "/Sales_Order__c",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/lead",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"{{VERSION}}",
+								"lead"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Sales_Order__c",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Account_No__c\": \"1234567899\",\r\n    \"Account__c\": \"\",\r\n    \"Activity__c\": \"\",\r\n    \"Billing_Account__c\": \"\",\r\n    \"Billing_City__c\": null,\r\n    \"Billing_Country__c\": null,\r\n    \"Billing_Full_Address__c\": null,\r\n    \"Billing_State__c\": null,\r\n    \"Billing_Street__c\": null,\r\n    \"Billing_Zipcode__c\": null,\r\n    \"Carrier__c\": null,\r\n    \"COD_Amount__c\": null,\r\n    \"Collection_Transaction_ID__c\": null,\r\n    \"Commitment_of_Sender__c\": null,\r\n    \"Contact__c\": null,\r\n    \"Country_Delivery__c\": null,\r\n    \"CurrencyIsoCode\": \"VND\",\r\n    \"Datetime_Acceptanced__c\": null,\r\n    \"Datetime_Created__c\": null,\r\n    \"Deal__c\": null,\r\n    \"Delivery_Fail_Option__c\": \"Chuyển hoàn\",\r\n    \"Description_Information__c\": null,\r\n    \"Employee_Delivery_Name__c\": null,\r\n    \"Employee_Delivery_Phone__c\": null,\r\n    \"Employee_Owner_Phone__c\": null,\r\n    \"Employee_Pickup_Name__c\": null,\r\n    \"Employee_Pickup_Phone__c\": null,\r\n    \"Extra_Requirement__c\": null,\r\n    \"Lead_Time__c\": null,\r\n    \"Location_Details__c\": null,\r\n    \"Location_Type__c\": null,\r\n    \"Location__c\": null,\r\n    \"Main_Fee__c\": null,\r\n    \"Name\": \"K1234511N\",\r\n    \"Navigate_Information__c\": \"Điều tin\",\r\n    \"Navigation_Status__c\": \"Nhận tin\",\r\n    \"Net_Weight__c\": \"135\",\r\n    \"Next_Step_Activity__c\": null,\r\n    \"Next_Step_ID__c\": null,\r\n    \"Now_Status_Activity__c\": \"Ra khỏi nước chấp nhận\",\r\n    \"Now_Status_ID__c\": null,\r\n    \"Operational_Instruction__c\": null,\r\n    \"Order_Code__c\": null,\r\n    \"OwnerId\": \"0052v00000ZNQhjAAH\",\r\n    \"Phi_di_ch_vu_GTGT__c\": null,\r\n    \"Pickup_City__c\": \"59\",\r\n    \"Pickup_Country__c\": \"VN\",\r\n    \"Pickup_Email__c\": \"\",\r\n    \"Pickup_Full_Address__c\": \"Dong Binh Nhon Tho An Nhon Binh Dinh\",\r\n    \"Pickup_Name__c\": \"Tang Hoang Son\",\r\n    \"Pickup_Phone__c\": null,\r\n    \"Pickup_State__c\": null,\r\n    \"Pickup_Street__c\": null,\r\n    \"Pickup_Zipcode__c\": null,\r\n    \"PO_Acceptance__c\": null,\r\n    \"PO_Delivery__c\": null,\r\n    \"Primary_Service__c\": \"01t2v000009BwRDAA0\",\r\n    \"Purchase_Order__c\": null,\r\n    \"Quote__c\": null,\r\n    \"Reference_No__c\": null,\r\n    \"Request_Transaction_ID__c\": null,\r\n    \"Sales_Commission__c\": null,\r\n    \"Sending_Method__c\": \"Tại địa chỉ\",\r\n    \"Shipment_No__c\": null,\r\n    \"Shipping_City__c\": null,\r\n    \"Shipping_Country__c\": \"US\",\r\n    \"Shipping_Email__c\": \"\",\r\n    \"Shipping_Full_Address__c\": \"5208 Ferndale St Springdield , Va 22151\",\r\n    \"Shipping_Name__c\": \"Kim Long Ngo\",\r\n    \"Shipping_Phone__c\": null,\r\n    \"Shipping_State__c\": null,\r\n    \"Shipping_Street__c\": null,\r\n    \"Shipping_Zipcode__c\": null,\r\n    \"Statement_Transaction_ID__c\": null,\r\n    \"Terms_and_Conditions__c\": null,\r\n    \"Total_Weight__c\": \"235\",\r\n    \"Type_Of_Shipment__c\": null,\r\n    \"T_ng_phi__c\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/Sales_Order__c",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"{{VERSION}}",
+								"Sales_Order__c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Sales_Order__c/{id}",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Account_No__c\": \"1234567899\",\r\n    \"Account__c\": \"\",\r\n    \"Activity__c\": \"\",\r\n    \"Billing_Account__c\": \"\",\r\n    \"Billing_City__c\": null,\r\n    \"Billing_Country__c\": null,\r\n    \"Billing_Full_Address__c\": null,\r\n    \"Billing_State__c\": null,\r\n    \"Billing_Street__c\": null,\r\n    \"Billing_Zipcode__c\": null,\r\n    \"Carrier__c\": null,\r\n    \"COD_Amount__c\": null,\r\n    \"Collection_Transaction_ID__c\": null,\r\n    \"Commitment_of_Sender__c\": null,\r\n    \"Contact__c\": null,\r\n    \"Country_Delivery__c\": null,\r\n    \"CurrencyIsoCode\": \"VND\",\r\n    \"Datetime_Acceptanced__c\": null,\r\n    \"Datetime_Created__c\": null,\r\n    \"Deal__c\": null,\r\n    \"Delivery_Fail_Option__c\": \"Chuyển hoàn\",\r\n    \"Description_Information__c\": null,\r\n    \"Employee_Delivery_Name__c\": null,\r\n    \"Employee_Delivery_Phone__c\": null,\r\n    \"Employee_Owner_Phone__c\": null,\r\n    \"Employee_Pickup_Name__c\": null,\r\n    \"Employee_Pickup_Phone__c\": null,\r\n    \"Extra_Requirement__c\": null,\r\n    \"Lead_Time__c\": null,\r\n    \"Location_Details__c\": null,\r\n    \"Location_Type__c\": null,\r\n    \"Location__c\": null,\r\n    \"Main_Fee__c\": null,\r\n    \"Name\": \"J12345VN\",\r\n    \"Navigate_Information__c\": \"Điều tin\",\r\n    \"Navigation_Status__c\": \"Nhận tin\",\r\n    \"Net_Weight__c\": \"135\",\r\n    \"Next_Step_Activity__c\": null,\r\n    \"Next_Step_ID__c\": null,\r\n    \"Now_Status_Activity__c\": \"Ra khỏi nước chấp nhận\",\r\n    \"Now_Status_ID__c\": null,\r\n    \"Operational_Instruction__c\": null,\r\n    \"Order_Code__c\": null,\r\n    \"OwnerId\": \"0052v00000ZNQhjAAH\",\r\n    \"Phi_di_ch_vu_GTGT__c\": null,\r\n    \"Pickup_City__c\": \"59\",\r\n    \"Pickup_Country__c\": \"VN\",\r\n    \"Pickup_Email__c\": \"21212\",\r\n    \"Pickup_Full_Address__c\": \"Dong Binh Nhon Tho An Nhon Binh Dinh\",\r\n    \"Pickup_Name__c\": \"Tang Hoang Son\",\r\n    \"Pickup_Phone__c\": null,\r\n    \"Pickup_State__c\": null,\r\n    \"Pickup_Street__c\": null,\r\n    \"Pickup_Zipcode__c\": null,\r\n    \"PO_Acceptance__c\": null,\r\n    \"PO_Delivery__c\": null,\r\n    \"Primary_Service__c\": \"01t2v000009BwRDAA0\",\r\n    \"Purchase_Order__c\": null,\r\n    \"Quote__c\": null,\r\n    \"Reference_No__c\": null,\r\n    \"Request_Transaction_ID__c\": null,\r\n    \"Sales_Commission__c\": null,\r\n    \"Sending_Method__c\": \"Tại địa chỉ\",\r\n    \"Shipment_No__c\": null,\r\n    \"Shipping_City__c\": null,\r\n    \"Shipping_Country__c\": \"US\",\r\n    \"Shipping_Email__c\": \"\",\r\n    \"Shipping_Full_Address__c\": \"5208 Ferndale St Springdield , Va 22151\",\r\n    \"Shipping_Name__c\": \"Kim Long Ngo\",\r\n    \"Shipping_Phone__c\": null,\r\n    \"Shipping_State__c\": null,\r\n    \"Shipping_Street__c\": null,\r\n    \"Shipping_Zipcode__c\": null,\r\n    \"Statement_Transaction_ID__c\": null,\r\n    \"Terms_and_Conditions__c\": null,\r\n    \"Total_Weight__c\": \"235\",\r\n    \"Type_Of_Shipment__c\": null,\r\n    \"T_ng_phi__c\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/Sales_Order__c/0010k00000wMZ0bAAG",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"{{VERSION}}",
+								"Sales_Order__c",
+								"0010k00000wMZ0bAAG"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Sales_Order__c/{id}",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Id\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/Sales_Order__c/{id}",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"{{VERSION}}",
+								"Sales_Order__c",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"client_id\": \"3MVG9iLRabl2Tf4gr86vkEZj9L.vd8vrhn9RTezhzKRTl9MBN241HKK2THi_us3O5d9FNQXwVotI1Zg1lRuFp\",\r\n\t\"client_secret\": \"B63176167C95106AAB70F2A7A4711B4C4DD29A8106E738AA429BD7437D788F8D\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}:{{PORT}}/{{VERSION}}/auth/login",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"{{VERSION}}",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{INSTANCE_URL}}/services/oauth2/token?client_id={{CONSUMER_KEY}}&grant_type=password&client_secret={{CONSUMER_SECRET}}&username={{SFUSERNAME}}&password={{PASSWORD}}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{INSTANCE_URL}}/services/oauth2/token?client_id={{CONSUMER_KEY}}&grant_type=password&client_secret={{CONSUMER_SECRET}}&username={{SFUSERNAME}}&password={{PASSWORD}}",
+					"host": [
+						"{{INSTANCE_URL}}"
+					],
+					"path": [
+						"services",
+						"oauth2",
+						"token"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "{{CONSUMER_KEY}}"
+						},
+						{
+							"key": "grant_type",
+							"value": "password"
+						},
+						{
+							"key": "client_secret",
+							"value": "{{CONSUMER_SECRET}}"
+						},
+						{
+							"key": "username",
+							"value": "{{SFUSERNAME}}"
+						},
+						{
+							"key": "password",
+							"value": "{{PASSWORD}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

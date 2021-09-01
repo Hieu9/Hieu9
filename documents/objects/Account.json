@@ -1,0 +1,98 @@
+{
+	"ID_he_thong_cu__c": "TUPIU8332YQKO12345",
+	"Name":"",
+	"CurrencyIsoCode":"",
+	"AccountNumber":"",
+	"OwnerId":"",
+	"Site":"",
+	"AccountSource":"",
+	"AnnualRevenue":"",
+	"BillingAddress":"",
+	"BusinessClass__c":"",
+	"BusinessID__c":"",
+	"CreatedById":"",
+	"Customer_s_Service__c":"",
+	"CustomerID__c":"",
+	"Jigsaw":"",
+	"Description":"",
+	"Email__c":"",
+	"Employee__c":"",
+	"NumberOfEmployees":"",
+	"External_Name__c":"",
+	"Industry":"",
+	"LastModifiedById":"",
+	"Ma_dang_ki_kinh_doanh__c":"",
+	"Mobile__c":"",
+	"Nga_y_tha_nh_l_p__c":"",
+	"OwnerPay__c":"",
+	"Ownership":"",
+	"ParentId":"",
+	"Phone":"",
+	"NCS_TestData__PopulateName__c":"",
+	"NCS_TestData__Populated__c":"",
+	"Post_Office__c":"",
+	"Post_Office_Name__c":"",
+	"Rating":"",
+	"Referent_account__c":"",
+	"ShippingAddress":"",
+	"Sic":"",
+	"SicDesc":"",
+	"Status__c":"",
+	"So_tai_khoan_ngan_hang__c":"",
+	"TaxCode__c":"",
+	"TickerSymbol":"",
+	"Type":"",
+	"Ten_chu_tai_khoan__c":"",
+	"Ten_ngan_hang__c":"",
+	"Website":"",
+	"Zalo__c":""
+}
+
+Error
+
+BillingAddress
+Cannot deserialize instance of BillingAddress from VALUE_STRING value  or request may be missing a required field
+
+Ignore
+
+No such column 'Ca_nh_n_T_ch_c__c' on sobject of type Account
+
+
+"Facebook__c":"",
+No such column 'Facebook__c' on sobject of type Account
+
+"Fax":"",
+No such column 'Fax' on sobject of type Account
+
+Nga_y_tha_nh_l_p__c
+No such column 'Nga_y_tha_nh_l_p__c' on sobject of type Account
+
+"Rating":"",
+No such column 'Rating' on sobject of type Account
+
+"Site":"",
+
+"BillingAddress":"",
+
+"ShippingAddress":"",
+Cannot deserialize instance of ShippingAddress from VALUE_STRING value  or request may be missing a required field
+
+"Sic":"",
+No such column 'Sic' on sobject of type Account
+
+"So_tai_khoan_ngan_hang__c":"",
+No such column 'So_tai_khoan_ngan_hang__c' on sobject of type Account
+
+TickerSymbol
+No such column 'TickerSymbol' on sobject of type Account
+
+Ten_chu_tai_khoan__c
+No such column 'Ten_chu_tai_khoan__c' on sobject of type Account
+
+Ten_ngan_hang__c
+No such column 'Ten_ngan_hang__c' on sobject of type Account
+
+Zalo__c
+No such column 'Zalo__c' on sobject of type Account
+
+Unable to create/update fields: CreatedById, Post_Office_Name__c. Please check the security settings of this field and verify that it is read/write for your profile or permission set

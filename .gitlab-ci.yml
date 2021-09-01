@@ -1,0 +1,29 @@
+stages:
+  - Bundle
+  - Deploy
+
+bundle:
+  stage: Bundle
+  tags:
+    - gateway-runner
+  script:
+    - bash -c "cd /opt/gateway/gateway && git fetch --all && git reset --hard origin/master"
+    - mv example.env .env
+    - docker container prune -f --filter "label=maintainer=nnhoang@cmc.com.vn"
+    - docker image prune -f -a --filter "label=maintainer=nnhoang@cmc.com.vn"
+    - export DATE=$(date '+%Y%m%d.%H%M')
+    - docker build -t gateway:$DATE .
+  only:
+    - master    
+
+deploy:
+  stage: Deploy
+  tags:
+    - gateway-runner
+  script:
+    - bash -c "cd /opt/gateway && ./run.sh"
+    - bash -c "cd /opt/gateway && docker stack deploy -c deploy.yml gw"
+  retry:
+    max: 2
+  only:
+    - master

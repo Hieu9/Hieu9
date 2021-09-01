@@ -1,0 +1,9 @@
+/node_modules
+/logs
+/csvs
+/sessions
+/caches
+.env
+# Dockerfile
+# docker-compose.yml
+/.env

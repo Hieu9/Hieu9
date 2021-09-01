@@ -1,0 +1,11 @@
+{
+    "uid": "crm.gateway.api",
+    "max": 5,  							// restart the app successively maximum of 5 times
+    "spinSleepTime": 1000, 				// time to wait until a next restart is attempted (in ms)
+    "minUptime": 100, 					// time min to up service (in ms)
+    "append": true, 					// append the logs, do not overwrite
+    "watch": true, 						// watch for changes and restart if they occur
+    "script": "index.js",  				// main startup script (almost like issuing node server.js)
+    "sourceDir": "", 					// the dir where the entire app code resides (dir structure is recursively traversed)
+    "args": []							// pass any arguments to the app
+}

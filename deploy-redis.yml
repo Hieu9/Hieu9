@@ -1,0 +1,19 @@
+version: "3.4"
+
+networks:
+  db-redis-net:
+
+services:
+  redis:
+    image: redis
+    command: redis-server --requirepass CMCts@2019 --appendonly yes
+    ports:
+      - 6379:6379
+    volumes:
+      - ./redis-data:/data
+    networks:
+      - db-redis-net
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure

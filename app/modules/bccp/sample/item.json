@@ -1,0 +1,1258 @@
+[
+    {
+      "External_Item_Id__c": "1113CK465085292VN",
+      "Item_Code__c": "CK465085292VN",
+      "Detail_Item_Name__c": "qA",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "440000"
+    },
+    {
+      "External_Item_Id__c": "1113CK465085377VN",
+      "Item_Code__c": "CK465085377VN",
+      "Detail_Item_Name__c": "qA",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "1113CK465085385VN",
+      "Item_Code__c": "CK465085385VN",
+      "Detail_Item_Name__c": "qA",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "420000"
+    },
+    {
+      "External_Item_Id__c": "13CA899708275VN",
+      "Item_Code__c": "CA899708275VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "1113CM441242387VN",
+      "Item_Code__c": "CM441242387VN",
+      "Detail_Item_Name__c": "aấn phẩm vimart",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "1113CD791166430VN",
+      "Item_Code__c": "CD791166430VN",
+      "Detail_Item_Name__c": "DO BO ",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "1113CD791166593VN",
+      "Item_Code__c": "CD791166593VN",
+      "Detail_Item_Name__c": "QUAN AO",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "1113CD791166602VN",
+      "Item_Code__c": "CD791166602VN",
+      "Detail_Item_Name__c": "QUAN",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "1113CD791166633VN",
+      "Item_Code__c": "CD791166633VN",
+      "Detail_Item_Name__c": "TRANH THEU ",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "1230000"
+    },
+    {
+      "External_Item_Id__c": "1113CD791166678VN",
+      "Item_Code__c": "CD791166678VN",
+      "Detail_Item_Name__c": "TUI XACH",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "1113CD791166681VN",
+      "Item_Code__c": "CD791166681VN",
+      "Detail_Item_Name__c": "GIAY",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "1113CG238115621VN",
+      "Item_Code__c": "CG238115621VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115635VN",
+      "Item_Code__c": "CG238115635VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115649VN",
+      "Item_Code__c": "CG238115649VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115652VN",
+      "Item_Code__c": "CG238115652VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115666VN",
+      "Item_Code__c": "CG238115666VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115670VN",
+      "Item_Code__c": "CG238115670VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115683VN",
+      "Item_Code__c": "CG238115683VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115697VN",
+      "Item_Code__c": "CG238115697VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115706VN",
+      "Item_Code__c": "CG238115706VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115710VN",
+      "Item_Code__c": "CG238115710VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115723VN",
+      "Item_Code__c": "CG238115723VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115737VN",
+      "Item_Code__c": "CG238115737VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115745VN",
+      "Item_Code__c": "CG238115745VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "13CG238115754VN",
+      "Item_Code__c": "CG238115754VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "1113CG238115768VN",
+      "Item_Code__c": "CG238115768VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115771VN",
+      "Item_Code__c": "CG238115771VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115785VN",
+      "Item_Code__c": "CG238115785VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115799VN",
+      "Item_Code__c": "CG238115799VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115808VN",
+      "Item_Code__c": "CG238115808VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115811VN",
+      "Item_Code__c": "CG238115811VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115825VN",
+      "Item_Code__c": "CG238115825VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115839VN",
+      "Item_Code__c": "CG238115839VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115842VN",
+      "Item_Code__c": "CG238115842VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115856VN",
+      "Item_Code__c": "CG238115856VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115860VN",
+      "Item_Code__c": "CG238115860VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115873VN",
+      "Item_Code__c": "CG238115873VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115887VN",
+      "Item_Code__c": "CG238115887VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115895VN",
+      "Item_Code__c": "CG238115895VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115900VN",
+      "Item_Code__c": "CG238115900VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115913VN",
+      "Item_Code__c": "CG238115913VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115927VN",
+      "Item_Code__c": "CG238115927VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115935VN",
+      "Item_Code__c": "CG238115935VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115944VN",
+      "Item_Code__c": "CG238115944VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115958VN",
+      "Item_Code__c": "CG238115958VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115961VN",
+      "Item_Code__c": "CG238115961VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115975VN",
+      "Item_Code__c": "CG238115975VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115989VN",
+      "Item_Code__c": "CG238115989VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238115992VN",
+      "Item_Code__c": "CG238115992VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238116009VN",
+      "Item_Code__c": "CG238116009VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238116012VN",
+      "Item_Code__c": "CG238116012VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238116026VN",
+      "Item_Code__c": "CG238116026VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238116030VN",
+      "Item_Code__c": "CG238116030VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238116043VN",
+      "Item_Code__c": "CG238116043VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238116057VN",
+      "Item_Code__c": "CG238116057VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238116065VN",
+      "Item_Code__c": "CG238116065VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "130000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238116074VN",
+      "Item_Code__c": "CG238116074VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "230000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238116088VN",
+      "Item_Code__c": "CG238116088VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "230000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238116091VN",
+      "Item_Code__c": "CG238116091VN",
+      "Detail_Item_Name__c": "khăn",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "230000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238116105VN",
+      "Item_Code__c": "CG238116105VN",
+      "Detail_Item_Name__c": "maáy xay ",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "230000"
+    },
+    {
+      "External_Item_Id__c": "1113CG238116114VN",
+      "Item_Code__c": "CG238116114VN",
+      "Detail_Item_Name__c": "giaầy",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "150000"
+    },
+    {
+      "External_Item_Id__c": "1113CC849541502VN",
+      "Item_Code__c": "CC849541502VN",
+      "Detail_Item_Name__c": "mỹ phaâẩm ",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "380000"
+    },
+    {
+      "External_Item_Id__c": "1113CC463420274VN",
+      "Item_Code__c": "CC463420274VN",
+      "Detail_Item_Name__c": "t",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "1113CB435114401VN",
+      "Item_Code__c": "CB435114401VN",
+      "Detail_Item_Name__c": "Q AO  l",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "135000"
+    },
+    {
+      "External_Item_Id__c": "1113CG346571515VN",
+      "Item_Code__c": "CG346571515VN",
+      "Detail_Item_Name__c": "Quần áo Chuyển phát thường Không cho xem hàng Tr",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "1113CG346571767VN",
+      "Item_Code__c": "CG346571767VN",
+      "Detail_Item_Name__c": "Quần áo Chuyển phát thường Không cho xem hàng Tr",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "459295"
+    },
+    {
+      "External_Item_Id__c": "13EC943616987VN",
+      "Item_Code__c": "EC943616987VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "1113EC598114326VN",
+      "Item_Code__c": "EC598114326VN",
+      "Detail_Item_Name__c": "haàng",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "60000"
+    },
+    {
+      "External_Item_Id__c": "13EE790175231VN",
+      "Item_Code__c": "EE790175231VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "13EE793353090VN",
+      "Item_Code__c": "EE793353090VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "13EE793543465VN",
+      "Item_Code__c": "EE793543465VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "13EE793543553VN",
+      "Item_Code__c": "EE793543553VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "13EE798181119VN",
+      "Item_Code__c": "EE798181119VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "13EE798184163VN",
+      "Item_Code__c": "EE798184163VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "13EE798184305VN",
+      "Item_Code__c": "EE798184305VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "13EE798184340VN",
+      "Item_Code__c": "EE798184340VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "13EE798184367VN",
+      "Item_Code__c": "EE798184367VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "13EE798184407VN",
+      "Item_Code__c": "EE798184407VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "13EE798184438VN",
+      "Item_Code__c": "EE798184438VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "13EE798184455VN",
+      "Item_Code__c": "EE798184455VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "13EE798184472VN",
+      "Item_Code__c": "EE798184472VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "13EE798184490VN",
+      "Item_Code__c": "EE798184490VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "1113EG639697677VN",
+      "Item_Code__c": "EG639697677VN",
+      "Detail_Item_Name__c": "THUOC BO",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "550000"
+    },
+    {
+      "External_Item_Id__c": "1113EG639697924VN",
+      "Item_Code__c": "EG639697924VN",
+      "Detail_Item_Name__c": "thuoc bo",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "380000"
+    },
+    {
+      "External_Item_Id__c": "1113EL981493373VN",
+      "Item_Code__c": "EL981493373VN",
+      "Detail_Item_Name__c": "Truyện tranh cho béECOD Cho xem hàng Trọng lượng q",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "125000"
+    },
+    {
+      "External_Item_Id__c": "1113EL981494949VN",
+      "Item_Code__c": "EL981494949VN",
+      "Detail_Item_Name__c": "Truyện tranh cho béECOD Cho xem hàng Trọng lượng q",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "125000"
+    },
+    {
+      "External_Item_Id__c": "1113EK283141287VN",
+      "Item_Code__c": "EK283141287VN",
+      "Detail_Item_Name__c": "thuốc thú y",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "1030000"
+    },
+    {
+      "External_Item_Id__c": "1113EL168989047VN",
+      "Item_Code__c": "EL168989047VN",
+      "Detail_Item_Name__c": "nhẫn bạc",
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "470000"
+    },
+    {
+      "External_Item_Id__c": "1113EP345022313VN",
+      "Item_Code__c": "EP345022313VN",
+      "Detail_Item_Name__c": "Vòng trầm Chuyển phát nhanh Cho xem hàng Trọng lượ",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "1113ES343392917VN",
+      "Item_Code__c": "ES343392917VN",
+      "Detail_Item_Name__c": "BộtTràXanhNguyênChất100gam",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "46400"
+    },
+    {
+      "External_Item_Id__c": "1113ES343396556VN",
+      "Item_Code__c": "ES343396556VN",
+      "Detail_Item_Name__c": "BộtTràXanhNguyênChất100gam",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "86600"
+    },
+    {
+      "External_Item_Id__c": "13ES090316814VN",
+      "Item_Code__c": "ES090316814VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": "95000"
+    },
+    {
+      "External_Item_Id__c": "1113ES343213933VN",
+      "Item_Code__c": "ES343213933VN",
+      "Detail_Item_Name__c": "Balo pha lưới hoa cúc nhiều ngăn đi học đi chơi đề",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "169000"
+    },
+    {
+      "External_Item_Id__c": "1113ES343256355VN",
+      "Item_Code__c": "ES343256355VN",
+      "Detail_Item_Name__c": "Sỉ  Lẻ   Con lăn Foam Roller massage, dãn cơ tập g",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "196940"
+    },
+    {
+      "External_Item_Id__c": "1113ES343350510VN",
+      "Item_Code__c": "ES343350510VN",
+      "Detail_Item_Name__c": "Mã WBGREEN giảm 12 tối đa 30k đơn từ 99k trở lên B",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "184092"
+    },
+    {
+      "External_Item_Id__c": "1113ES343358884VN",
+      "Item_Code__c": "ES343358884VN",
+      "Detail_Item_Name__c": "Mã WBGREEN giảm 12 tối đa 30k đơn từ 99k trở lên B",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "1113ES343382897VN",
+      "Item_Code__c": "ES343382897VN",
+      "Detail_Item_Name__c": "Mã WA0909 giảm 12k đơn 50k Quần bom thụng ly to xo",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "57290"
+    },
+    {
+      "External_Item_Id__c": "1113ES343386633VN",
+      "Item_Code__c": "ES343386633VN",
+      "Detail_Item_Name__c": "Balo pha lưới hoa cúc nhiều ngăn đi học đi chơi đề",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "169000"
+    },
+    {
+      "External_Item_Id__c": "1113ES343392789VN",
+      "Item_Code__c": "ES343392789VN",
+      "Detail_Item_Name__c": "Balo pha lưới hoa cúc nhiều ngăn đi học đi chơi đề",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "338000"
+    },
+    {
+      "External_Item_Id__c": "1113ES343401980VN",
+      "Item_Code__c": "ES343401980VN",
+      "Detail_Item_Name__c": "Mã WBGREEN giảm 12 tối đa 30k đơn từ 99k trở lên B",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "160000"
+    },
+    {
+      "External_Item_Id__c": "1113ES343451133VN",
+      "Item_Code__c": "ES343451133VN",
+      "Detail_Item_Name__c": "Balo gấu Fumiao chống nước Hàn Quốc kèm gấu Freesh",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "378000"
+    },
+    {
+      "External_Item_Id__c": "1113ES343457706VN",
+      "Item_Code__c": "ES343457706VN",
+      "Detail_Item_Name__c": "Bộ nam loang cotton mịn dày đẹp  Không cho xem hàn",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "107400"
+    },
+    {
+      "External_Item_Id__c": "1113ES343460166VN",
+      "Item_Code__c": "ES343460166VN",
+      "Detail_Item_Name__c": "Mã WA0909 giảm 12k đơn 50k Áo sơ mi hoạ tiết(Nhiều",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "110000"
+    },
+    {
+      "External_Item_Id__c": "1113ES343313083VN",
+      "Item_Code__c": "ES343313083VN",
+      "Detail_Item_Name__c": "Mã WA0909 giảm 12k đơn 50k Quần legging ngố ngắn h",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "58000"
+    },
+    {
+      "External_Item_Id__c": "1113ES343363592VN",
+      "Item_Code__c": "ES343363592VN",
+      "Detail_Item_Name__c": "Mã WBGREEN giảm 12 tối đa 30k đơn từ 99k trở lên B",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "171500"
+    },
+    {
+      "External_Item_Id__c": "1113ES343372311VN",
+      "Item_Code__c": "ES343372311VN",
+      "Detail_Item_Name__c": "Mã WBGREEN giảm 12 tối đa 30k đơn từ 99k trở lên B",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "188000"
+    },
+    {
+      "External_Item_Id__c": "1113ES343373405VN",
+      "Item_Code__c": "ES343373405VN",
+      "Detail_Item_Name__c": "FREESHIP 50K Set 3 Món Kèm Ảnh Thật(Có Đệm Mút)FRE",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "151000"
+    },
+    {
+      "External_Item_Id__c": "1113ES343373419VN",
+      "Item_Code__c": "ES343373419VN",
+      "Detail_Item_Name__c": "Mã WA0909 giảm 12k đơn 50k Áo Hoddie nỉ bông cá tí",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "38600"
+    },
+    {
+      "External_Item_Id__c": "1113ES343377101VN",
+      "Item_Code__c": "ES343377101VN",
+      "Detail_Item_Name__c": "Balo pha lưới hoa cúc nhiều ngăn đi học đi chơi đề",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "171348"
+    },
+    {
+      "External_Item_Id__c": "1113ES343377565VN",
+      "Item_Code__c": "ES343377565VN",
+      "Detail_Item_Name__c": "Balo pha lưới hoa cúc nhiều ngăn đi học đi chơi đề",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "174500"
+    },
+    {
+      "External_Item_Id__c": "1113ES343380445VN",
+      "Item_Code__c": "ES343380445VN",
+      "Detail_Item_Name__c": "Balo pha lưới hoa cúc nhiều ngăn đi học đi chơi đề",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "197000"
+    },
+    {
+      "External_Item_Id__c": "1113ES343381070VN",
+      "Item_Code__c": "ES343381070VN",
+      "Detail_Item_Name__c": "Balo pha lưới hoa cúc nhiều ngăn đi học đi chơi đề",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "171500"
+    },
+    {
+      "External_Item_Id__c": "1113ES343384164VN",
+      "Item_Code__c": "ES343384164VN",
+      "Detail_Item_Name__c": "Mã WBGREEN giảm 12 tối đa 30k đơn từ 99k trở lên B",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "168000"
+    },
+    {
+      "External_Item_Id__c": "1113ES343386050VN",
+      "Item_Code__c": "ES343386050VN",
+      "Detail_Item_Name__c": "Balo pha lưới hoa cúc nhiều ngăn đi học đi chơi đề",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "174500"
+    },
+    {
+      "External_Item_Id__c": "1113ES343387713VN",
+      "Item_Code__c": "ES343387713VN",
+      "Detail_Item_Name__c": "Balo pha lưới hoa cúc nhiều ngăn đi học đi chơi đề",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "191400"
+    },
+    {
+      "External_Item_Id__c": "1113ES343396940VN",
+      "Item_Code__c": "ES343396940VN",
+      "Detail_Item_Name__c": "Mã WA0909 giảm 12k đơn 50k combo tý quậy,conan  Kh",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "70000"
+    },
+    {
+      "External_Item_Id__c": "1113ES343424455VN",
+      "Item_Code__c": "ES343424455VN",
+      "Detail_Item_Name__c": "Ba lô KIKIMI cu te chống nước mẫu hót nhất 2020 kh",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "321000"
+    },
+    {
+      "External_Item_Id__c": "1113ES343434651VN",
+      "Item_Code__c": "ES343434651VN",
+      "Detail_Item_Name__c": "Ba lô học sinh siêu dễ  thương dành cho nữBa lô họ",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "330000"
+    },
+    {
+      "External_Item_Id__c": "1113ES343448576VN",
+      "Item_Code__c": "ES343448576VN",
+      "Detail_Item_Name__c": "FREESHIP 50kVáy nỉ lót lông mũ cô gái  Không cho x",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "80000"
+    },
+    {
+      "External_Item_Id__c": "1113ES343451368VN",
+      "Item_Code__c": "ES343451368VN",
+      "Detail_Item_Name__c": "Bộ nam loang cotton mịn dày đẹp  Không cho xem hàn",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "113000"
+    },
+    {
+      "External_Item_Id__c": "1113ES343451371VN",
+      "Item_Code__c": "ES343451371VN",
+      "Detail_Item_Name__c": "Mã WA0909 giảm 12k đơn 50k Quần legging ngố ngắn h",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "1113ES343458105VN",
+      "Item_Code__c": "ES343458105VN",
+      "Detail_Item_Name__c": "Mã WA0909 giảm 12k đơn 50k Quần legging ngố ngắn h",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "128000"
+    },
+    {
+      "External_Item_Id__c": "1113ES343462723VN",
+      "Item_Code__c": "ES343462723VN",
+      "Detail_Item_Name__c": "Kem tan mỡ The Prime ( mẫu mã mới)  Không cho xem ",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "742400"
+    },
+    {
+      "External_Item_Id__c": "1113ES343463715VN",
+      "Item_Code__c": "ES343463715VN",
+      "Detail_Item_Name__c": "Bộ nam loang cotton mịn dày đẹpBộ nam loang cotton",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "214600"
+    },
+    {
+      "External_Item_Id__c": "1113ES343464344VN",
+      "Item_Code__c": "ES343464344VN",
+      "Detail_Item_Name__c": "Ba lô học sinh siêu dễ  thương dành cho nữ  Không ",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "167500"
+    },
+    {
+      "External_Item_Id__c": "1113ES343467310VN",
+      "Item_Code__c": "ES343467310VN",
+      "Detail_Item_Name__c": "Bộ nam loang cotton mịn dày đẹp  Không cho xem hàn",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "86000"
+    },
+    {
+      "External_Item_Id__c": "1113ES343468332VN",
+      "Item_Code__c": "ES343468332VN",
+      "Detail_Item_Name__c": "Mã WA0909 giảm 12k đơn 50k Áo Hoddie nỉ bông cá tí",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "19000"
+    },
+    {
+      "External_Item_Id__c": "1113ES343472941VN",
+      "Item_Code__c": "ES343472941VN",
+      "Detail_Item_Name__c": "Ba lô học sinh siêu dễ  thương dành cho nữ  Không ",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "13EV897966731VN",
+      "Item_Code__c": "EV897966731VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "1113EW742376785VN",
+      "Item_Code__c": "EW742376785VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HH",
+      "Item_Vasproperty_Value__c": "300000"
+    },
+    {
+      "External_Item_Id__c": "13EX931707500VN",
+      "Item_Code__c": "EX931707500VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "1113PB810849014VN",
+      "Item_Code__c": "PB810849014VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849028VN",
+      "Item_Code__c": "PB810849028VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849031VN",
+      "Item_Code__c": "PB810849031VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849045VN",
+      "Item_Code__c": "PB810849045VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849059VN",
+      "Item_Code__c": "PB810849059VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849062VN",
+      "Item_Code__c": "PB810849062VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849076VN",
+      "Item_Code__c": "PB810849076VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849080VN",
+      "Item_Code__c": "PB810849080VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849093VN",
+      "Item_Code__c": "PB810849093VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849102VN",
+      "Item_Code__c": "PB810849102VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849116VN",
+      "Item_Code__c": "PB810849116VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849120VN",
+      "Item_Code__c": "PB810849120VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849133VN",
+      "Item_Code__c": "PB810849133VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849147VN",
+      "Item_Code__c": "PB810849147VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849155VN",
+      "Item_Code__c": "PB810849155VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849164VN",
+      "Item_Code__c": "PB810849164VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849178VN",
+      "Item_Code__c": "PB810849178VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849181VN",
+      "Item_Code__c": "PB810849181VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849204VN",
+      "Item_Code__c": "PB810849204VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849218VN",
+      "Item_Code__c": "PB810849218VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849221VN",
+      "Item_Code__c": "PB810849221VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849235VN",
+      "Item_Code__c": "PB810849235VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "1113PB810849249VN",
+      "Item_Code__c": "PB810849249VN",
+      "Detail_Item_Name__c": "GO Xa XI",
+      "Item_Amount__c": 0,
+      "Commodity_Type_Code__c": "HCK",
+      "Item_Vasproperty_Value__c": "23950000"
+    },
+    {
+      "External_Item_Id__c": "13RF447737854VN",
+      "Item_Code__c": "RF447737854VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "13RE520144152VN",
+      "Item_Code__c": "RE520144152VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    },
+    {
+      "External_Item_Id__c": "13RE520144166VN",
+      "Item_Code__c": "RE520144166VN",
+      "Detail_Item_Name__c": null,
+      "Item_Amount__c": null,
+      "Commodity_Type_Code__c": "TL",
+      "Item_Vasproperty_Value__c": null
+    }
+]

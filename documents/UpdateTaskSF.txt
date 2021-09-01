@@ -1,0 +1,185 @@
+global class UpdateTask implements Schedulable, Database.AllowsCallouts,Database.Batchable<sObject> {
+    global void execute(SchedulableContext ctx) {
+        Database.executebatch(new UpdateTask());
+    }
+    public Iterable<sObject> start(Database.Batchablecontext BC){
+        List<Task> tasks = [SELECT Id, Record_Url__c, Call_Id__c, Refer_To__c, Subject FROM Task WHERE Record_Url__c = null AND Accepted__c = 'accepted' AND CreatedDate >= LAST_N_DAYS:1];
+        // Create a task for each opportunity in the list
+        if(!tasks.isEmpty()){
+            List<String> myCids = new List<String>();
+            for(Task t : tasks){
+                if(t.Call_Id__c != null){
+                    myCids.add(t.Call_Id__c);
+                }
+            }
+            if(myCids != null){
+                HTTPResponse response = CalloutCallCenter.logs(myCids);
+                Map<String, Object> m = (Map<String, Object>)JSON.deserializeUntyped(response.getBody());
+                List<Object> tasksRes = (List<Object>)m.get('body');
+                if(tasksRes.size() > 0){
+                    for(Task t : tasks ){
+                        for(Object ts : tasksRes){
+                            Map<String,Object> mts = (Map<string,Object>)ts;
+                            if(t.get('Refer_To__c') != null){
+                                if((t.Call_Id__c == mts.get('call_id') || t.Call_Id__c == mts.get('callee_id')) && t.Refer_To__c == mts.get('refer')){
+                                    t.Record_Url__c = (String) mts.get('record_url');
+                                    t.CallDurationInSeconds = (Integer) mts.get('duration');
+                                }
+                            }else{
+                                if((t.Call_Id__c == mts.get('call_id') || t.Call_Id__c == mts.get('callee_id')) && (mts.get('refer') == null || mts.get('refer') == '')){
+                                    t.Record_Url__c = (String) mts.get('record_url');
+                                    t.CallDurationInSeconds = (Integer) mts.get('duration');
+                                }
+                            }
+                        }
+                    }    
+                }else{
+                    return tasks;
+                }
+            }else{
+                System.debug('-- Not have callIds --');
+                return tasks;
+            }
+        }else{
+            return tasks;
+        }
+        return tasks;
+    }
+    
+    public void execute(Database.BatchableContext BC, List<Task> tasks){
+        if(tasks.size() > 0){
+            update tasks;
+        }
+    }
+
+    public void finish(Database.BatchableContext info){
+        Id job = info.getJobId();
+        System.debug('--- Job Id: '+job);
+    }
+}
+
+public class CalloutCallCenter {
+    public static HttpResponse logs(List<String> callIds) {
+        Http http = new Http();
+        HttpRequest request = new HttpRequest();
+        request.setEndpoint('http://183.91.11.56:9001/v46.0/cc/logs');
+        request.setMethod('POST');
+        request.setHeader('Content-Type', 'application/json;charset=UTF-8');
+        request.setBody('{"callIds":'+JSON.serializePretty(callIds)+'}');
+        HttpResponse response = http.send(request);
+        // Parse the JSON response
+        if (response.getStatusCode() != 200) {
+            System.debug('The status code returned was not expected: ' +
+                response.getStatusCode() + ' ' + response.getStatus());
+        } else {
+            System.debug(response.getBody());
+        }
+        return response;
+    }
+}
+
+@isTest 
+public class CalloutCallCenterTestT {
+    @isTest static void testCallout() {
+        Test.setMock(HttpCalloutMock.class, new MockHttpResponseGenerator());
+        List<String> myArray = new List<String>();
+        HttpResponse res = CalloutCallCenter.logs(myArray);
+    }
+}
+
+@isTest
+public class TaskUpdateBatchJobTest {
+    static testMethod void testMethod1() 
+    {
+        List<Task> tasks = new List<Task>();
+        
+        for(Integer i=0 ;i <3;i++)
+        {
+            Task t = new Task();
+            t.Subject = 'Subject'+i;
+            t.Call_Id__c = '902323';
+            // t.Record_Url__c = 'http://';
+            tasks.add(t);
+        }
+        insert tasks;
+        
+        Test.startTest();
+        if(!tasks.isEmpty()){
+            List<String> myCids = new List<String>();
+            for(Task t : tasks){
+                if(t.Call_Id__c != null){
+                    myCids.add(t.Call_Id__c);
+                }
+            }
+            if(myCids != null){
+                Test.setMock(HttpCalloutMock.class, new MockHttpResponseGenerator());
+                // Call method to test
+                HTTPResponse response = CalloutCallCenter.logs(myCids);
+                Map<String, Object> m = (Map<String, Object>)JSON.deserializeUntyped(response.getBody());
+                List<Object> tasksRes = (List<Object>)m.get('body');
+                if(tasksRes.size() > 0){
+                    for(Task t : tasks ){
+                        for(Object ts : tasksRes){
+                            Map<String,Object> mts = (Map<string,Object>)ts;
+                            if(t.Call_Id__c == mts.get('call_id')){
+                                t.Record_Url__c = (String) mts.get('record_url');
+                                t.CallDurationInSeconds = (Integer) mts.get('duration');
+                            }else{
+                                // System.debug(t);
+                            }
+                        }
+                    }    
+                }   
+            }
+        }
+        
+        UpdateTask obj = new UpdateTask();
+        String jobId = System.schedule('ScheduledApexTest', '0 0 * * * ?', obj);
+        DataBase.executeBatch(obj);
+        Test.stopTest();
+    }
+}
+
+UpdateTask task = new UpdateTask();
+// Seconds Minutes Hours Day_of_month Month Day_of_week optional_year
+String sch5 = '0 5 * * * ?';
+String job5 = System.schedule('UpdateTaskLogs5', sch5, task);
+
+String sch10 = '0 10 * * * ?';
+String job10 = System.schedule('UpdateTaskLogs10', sch10, task);
+
+String sch15 = '0 15 * * * ?';
+String job15 = System.schedule('UpdateTaskLogs15', sch15, task);
+
+String sch20 = '0 20 * * * ?';
+String job20 = System.schedule('UpdateTaskLogs20', sch20, task);
+
+String sch25 = '0 25 * * * ?';
+String job25 = System.schedule('UpdateTaskLogs25', sch25, task);
+
+String sch30 = '0 30 * * * ?';
+String job30 = System.schedule('UpdateTaskLogs30', sch30, task);
+
+String sch35 = '0 35 * * * ?';
+String job35 = System.schedule('UpdateTaskLogs35', sch35, task);
+
+String sch40 = '0 40 * * * ?';
+String job40 = System.schedule('UpdateTaskLogs40', sch40, task);
+
+String sch45 = '0 45 * * * ?';
+String job45 = System.schedule('UpdateTaskLogs45', sch45, task);
+
+String sch50 = '0 50 * * * ?';
+String job50 = System.schedule('UpdateTaskLogs50', sch50, task);
+
+String sch55 = '0 55 * * * ?';
+String job55 = System.schedule('UpdateTaskLogs55', sch55, task);
+
+String sch60 = '59 59 * * * ?';
+String job60 = System.schedule('UpdateTaskLogs60', sch60, task);
+
+
+UpdateTask task = new UpdateTask();
+// Seconds Minutes Hours Day_of_month Month Day_of_week optional_year
+String sch5 = '0 56 13 7 * ?';
+String job5 = System.schedule('UpdateTaskLogs5', sch5, task);

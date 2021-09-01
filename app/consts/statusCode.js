@@ -1,0 +1,11 @@
+exports.SUCCESS = 200;
+exports.POST_SUCCESS = 201;
+exports.DELETE_SUCCESS = 204;
+exports.UPDATE_SUCCESS = 204;
+exports.UNAUTHORIED = 401;
+exports.UNAUTHORIED_USERCHATTER = 402;
+exports.PARAMS = 405;
+exports.SERVER = 500;
+exports.INVALID_PARAMS = 400;
+exports.NOT_FOUND = 404;
+exports.PG_INVALID_PARAMS = 503;

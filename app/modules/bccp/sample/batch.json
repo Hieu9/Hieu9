@@ -1,0 +1,38 @@
+[
+  {
+    "Batch_Number__c": "CA968191930VN",
+    "Numbers_Of_Item__c": 1,
+    "Batch_Value__c": 0,
+    "Real_Summary_Weight__c": 3920,
+    "Converted_Summary_Weight__c": 3920,
+    "Batch_Cod__c": 0,
+    "Primary_Service__c": "",
+    "Sending_Method__c": false,
+    "PO_Acceptance__c": "962900",
+    "CreatedById": "2020-09-13T07:52:31.48"
+  },
+  {
+    "Batch_Number__c": "CA968191930VN",
+    "Numbers_Of_Item__c": 1,
+    "Batch_Value__c": 0,
+    "Real_Summary_Weight__c": 3920,
+    "Converted_Summary_Weight__c": 3920,
+    "Batch_Cod__c": 0,
+    "Primary_Service__c": "CTN0",
+    "Sending_Method__c": false,
+    "PO_Acceptance__c": "962900",
+    "CreatedById": "2020-09-13T07:52:31.48"
+  },
+  {
+    "Batch_Number__c": "CB262384059VN",
+    "Numbers_Of_Item__c": 1,
+    "Batch_Value__c": 0,
+    "Real_Summary_Weight__c": 850,
+    "Converted_Summary_Weight__c": 850,
+    "Batch_Cod__c": 0,
+    "Primary_Service__c": "",
+    "Sending_Method__c": false,
+    "PO_Acceptance__c": "261900",
+    "CreatedById": "2020-09-13T07:52:17.51"
+  }
+]
